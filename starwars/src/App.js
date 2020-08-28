@@ -1,7 +1,17 @@
 import React from 'react';
 import './App.css';
+import axios from 'axios'
 
 const App = () => {
+
+  axios.get('https://swapi.dev/api/people/1/')
+  .then((res) => {
+
+    console.log(res)
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
