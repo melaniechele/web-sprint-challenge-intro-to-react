@@ -1,8 +1,14 @@
 import React from 'react';
 import NameCards from './NameCards'
+import styled from 'styled-components'
+
 
 
 // import './index.css';
+const WrapperDiv = styled.div`
+color: red;
+text-align: center;
+`;
 
 
 function Character(props){
@@ -10,11 +16,11 @@ function Character(props){
     const {data} = props
     console.log(data)
     return (
-        <div>
+        <WrapperDiv>
     {data.map((element, index)=>{
       return ( <NameCards key = {index} name={element.name} birthday={element.birth_year} />)
     })}
-    </div>
+    </WrapperDiv>
     )
 }
 

@@ -2,11 +2,12 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios'
 import Character from './components/Character'
-import {
-  Card, CardBody,
-  CardTitle
-} from 'reactstrap';
+import styled from 'styled-components'
 
+const WrapperDiv = styled.div`
+color: red;
+text-align: center;
+`;
 
 const App = () => {
 
@@ -42,13 +43,11 @@ useEffect(() => {
 // }
 
 return (
-  <div className="App">
-    <Card>
-      <CardBody>
-        <CardTitle className="back"><Character data = {data}/></CardTitle>
-      </CardBody>
-    </Card>
-  </div>
+  <WrapperDiv>
+    
+      <Character data = {data}/>
+   
+  </WrapperDiv>
 );
 }
 
